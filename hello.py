@@ -14,20 +14,20 @@ dataString.remove('')
 data = np.array(dataString).astype(np.float64)
 
 
-# startTime = time.time()
-# def bubble_sort(kiwi):  #Bubble_sort function.
-#        for i in range(0,len(kiwi)-1):  #i =index.
-#            for j in range(len(kiwi)-1): #The function len() returns the length of an object.
-#                if(kiwi[j]>kiwi[j+1]):  #If value in list is greater than value to the right of it.
-#                    temp = kiwi[j]  
-#                    kiwi[j] = kiwi[j+1]  #Switch the values if they are not in higher to lower order.
-#                    kiwi[j+1] = temp  #Temp = Temporary files, or "tempfiles", are mainly used to store intermediate information on disk for an application.
+startTime = time.time()
+def bubble_sort(kiwi):  #Bubble_sort function.
+        for i in range(0,len(kiwi)-1):  #i =index.
+            for j in range(len(kiwi)-1): #The function len() returns the length of an object.
+                if(kiwi[j]>kiwi[j+1]):  #If value in list is greater than value to the right of it.
+                    temp = kiwi[j]  
+                    kiwi[j] = kiwi[j+1]  #Switch the values if they are not in higher to lower order.
+                    kiwi[j+1] = temp  #Temp = Temporary files, or "tempfiles", are mainly used to store intermediate information on disk for an application.
     
-#        return kiwi         
+        return kiwi         
 
-# endTime = time.time()-startTime
-# print("The sorted list is:", bubble_sort(data))  #Prints the data.
-# print("Seconds code takes to run =", endTime - startTime)
+ endTime = time.time()-startTime
+ print("The sorted list is:", bubble_sort(data))  #Prints the data.
+ print("Seconds code takes to run =", endTime - startTime)
 
 
 
@@ -36,22 +36,22 @@ data = np.array(dataString).astype(np.float64)
     
 # # #............................................................................................................................................................
 
-# startTime = time.time()
-# def selection_sort(kiwi): #Create function selection_sort, sequence is (kiwi).
-#     indexing_length = (len(kiwi)-1) #Specifying indexing length..using -1 bc when have 1 item left in unsorted list no comparrision needed.
-#     for i in range(indexing_length): #For loop, setting i to 0.
-#             min_value = i #Each itteration first element in unsorted list to be default min.
+ startTime = time.time()
+ def selection_sort(kiwi): #Create function selection_sort, sequence is (kiwi).
+     indexing_length = (len(kiwi)-1) #Specifying indexing length..using -1 bc when have 1 item left in unsorted list no comparrision needed.
+     for i in range(indexing_length): #For loop, setting i to 0.
+             min_value = i #Each itteration first element in unsorted list to be default min.
 
-#     if kiwi[indexing_length] < kiwi[min_value]: #List in J position less than current min value then need to replace min value.                  
-#         min_value = indexing_length #Going through all the elements to the right of index. If something smaller change to min value.
+     if kiwi[indexing_length] < kiwi[min_value]: #List in J position less than current min value then need to replace min value.                  
+         min_value = indexing_length #Going through all the elements to the right of index. If something smaller change to min value.
 
-#         if min_value != i: #Switching the min value. if we find item at lower value then need to switch those items.
-#                    kiwi[min_value], kiwi[i] = kiwi[i], kiwi[min_value] #Kiwi in min value pos, kiwi in high pos, = kiwi in high pos,
-#                    # kiwi in low pos.
-#     return kiwi #Line up with FOR statement.
-# endTime = time.time()-startTime
-# print("The data list is:",selection_sort(data)) #funtion selection sort, passing (data).
-# print("Seconds code takes to run =", endTime - startTime)
+         if min_value != i: #Switching the min value. if we find item at lower value then need to switch those items.
+                    kiwi[min_value], kiwi[i] = kiwi[i], kiwi[min_value] #Kiwi in min value pos, kiwi in high pos, = kiwi in high pos,
+                    # kiwi in low pos.
+     return kiwi #Line up with FOR statement.
+ endTime = time.time()-startTime
+ print("The data list is:",selection_sort(data)) #funtion selection sort, passing (data).
+ print("Seconds code takes to run =", endTime - startTime)
 
 #.......................................................................................................................................
 
